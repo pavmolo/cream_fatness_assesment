@@ -13,7 +13,6 @@ cream_target_mass = st.number_input(f"Сколько сливок целевой
 
 cream_output = cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
 
-col1, col2, col3 = st.columns(3)
-col1.metric("Коэффициент пропорции (сливки/молоко)", cream_output[0], "")
-col2.metric("Сколько сливок лить для разбавления", cream_output[1], "кг")
-col3.metric("Сколько молока нужно лить для разбавления", cream_output[2], "кг")
+st.metric("Коэффициент пропорции (сливки/молоко)", f'{cream_output[0]}')
+st.metric("Сколько сливок лить для разбавления", f'{cream_output[1]} КГ')
+st.metric("Сколько молока нужно лить для разбавления", f'{cream_output[2]} КГ')

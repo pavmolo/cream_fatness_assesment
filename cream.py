@@ -6,7 +6,7 @@ def cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass):
   milk_share_mass = cream_target_mass / coeff
   return [coeff, cream_share_mass, milk_share_mass]
 st.markdown('''<a href="http://kaizen-consult.ru/"><img src='https://www.kaizen.com/images/kaizen_logo.png' style="width: 50%; margin-left: 25%; margin-right: 25%; text-align: center;"></a><p>''', unsafe_allow_html=True)
-st.markdown('''Приложение для опеределния жирности сливок''', unsafe_allow_html=True)
+st.markdown('''<h1>Приложение для опеределния жирности сливок</h1>''', unsafe_allow_html=True)
 cream_fatness = st.slider("Исходное значение жирности сливок, %", 35, 54, 48, 1)
 milk_fatness = st.slider(f"Жирность молока, которым разбавляют сливки, %", 0.0, 5.0, 3.2, 0.2)
 creamfat_target = st.slider(f"Целевое значение жирности сливок, %", 35, 54, 45, 1)

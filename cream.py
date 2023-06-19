@@ -3,7 +3,7 @@ import streamlit as st
 def cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass):
   coeff = (creamfat_target - milk_fatness) / (cream_fatness - creamfat_target)
   cream_share_mass = (cream_target_mass * coeff) / (1 + coeff)
-  milk_share_mass = cream_target_mass / coeff
+  milk_share_mass = cream_share_mass / coeff
   return [coeff, cream_share_mass, milk_share_mass]
 st.markdown('''<a href="http://kaizen-consult.ru/"><img src='https://www.kaizen.com/images/kaizen_logo.png' style="width: 50%; margin-left: 25%; margin-right: 25%; text-align: center;"></a><p>''', unsafe_allow_html=True)
 st.markdown('''<h1>Приложение для опеределния жирности сливок</h1>''', unsafe_allow_html=True)

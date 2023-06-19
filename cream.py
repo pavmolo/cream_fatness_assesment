@@ -19,3 +19,4 @@ st.markdown('''<h2>Результаты расчетов:</h2>''', unsafe_allow_
 st.metric("Коэффициент пропорции (сливки/молоко)", f'{round(cream_output[0], 2)}')
 st.metric("Сколько сливок лить для разбавления", f'{round(cream_output[1], 2)} КГ')
 st.metric("Сколько молока нужно лить для разбавления", f'{round(cream_output[2], 2)} КГ')
+st.metric("Проверка", round(cream_output[1], 2) + round(cream_output[2], 2))

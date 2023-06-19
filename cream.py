@@ -9,7 +9,7 @@ def cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass):
 cream_fatness = st.slider("Исходное значение жирности сливок", 35, 54, 45, 1)
 milk_fatness = st.slider(f"Жирность молока, которым разбавляют сливки", 0, 5, 3.2, 0.2)
 creamfat_target = st.slider(f"Целевое значение жирности сливок", 35, 54, 45, 1)
-cream_target_mass = st.number_input(f"Сколько сливок целевой жирности нужно получить, кг", value=0)
+cream_target_mass = st.number_input(f"Сколько сливок целевой жирности нужно получить, кг", value=200)
 
 cream_output = cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
 

@@ -1,7 +1,7 @@
 import streamlit as st
 
 def cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass):
-  milk_share_mass = cream_target_mass - ((0.85 * cream_target_mass * creamfat_target) / (0.15 * cream_fatness * milk_fatness))
+  milk_share_mass = (1.15 * cream_target_mass * creamfat_target - cream_fatness * cream_target_mass) / (1.15 * (milk_fatness - cream_fatness))
   cream_share_mass = (cream_target_mass - milk_share_mass * 1.15) / 1.15
   sugar_share_mass = (milk_share_mass + cream_share_mass) * 0.15
   return [cream_share_mass, milk_share_mass, sugar_share_mass]

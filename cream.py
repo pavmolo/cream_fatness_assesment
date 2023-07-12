@@ -26,15 +26,13 @@ if sugar_mode == 'Сахар':
     st.metric("Сколько лить сливок", f'{round(cream_output[0], 2)} КГ')
     st.metric("Сколько лить молока", f'{round(cream_output[1], 2)} КГ')
     st.metric("Сколько сыпать сахара", f'{round(cream_output[2], 2)} КГ')
-    #st.metric
 else:
-    cream_output = condenced_milk(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
+    cream_output_cm = condenced_milk(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
     st.markdown('''<h2> </h2>''', unsafe_allow_html=True)
     st.markdown('''<h2>Результаты расчетов:</h2>''', unsafe_allow_html=True)
-    st.metric("Сколько лить сливок", f'{round(cream_output[0], 2)} КГ')
-    st.metric("Сколько лить молока", f'{round(cream_output[1], 2)} КГ')
-    st.metric("Сколько лить сгущенки", f'{round(cream_output[2], 2)} КГ')
-    #st.metric("Проверка", round(cream_output[1], 2) + round(cream_output[2], 2))
+    st.metric("Сколько лить сливок", f'{round(cream_output_cm[0], 2)} КГ')
+    st.metric("Сколько лить молока", f'{round(cream_output_cm[1], 2)} КГ')
+    st.metric("Сколько лить сгущенки", f'{round(cream_output_cm[2], 2)} КГ')
 
 
 

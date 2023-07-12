@@ -6,7 +6,7 @@ def cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass):
   sugar_share_mass = (milk_share_mass + cream_share_mass) * 0.15
   return [cream_share_mass, milk_share_mass, sugar_share_mass]
 def condenced_milk(cream_fatness, milk_fatness, creamfat_target, cream_target_mass):
-  cream_share_mass = ((cream_target_mass * (creamfat_target - milk_fatness)) + ((0.3 / 1.3) * cream_target_mass (1 - milk_fatness))) / (cream_fatness - milk_fatness)
+  cream_share_mass = ((cream_target_mass * (creamfat_target - milk_fatness)) + ((0.3 / 1.3) * cream_target_mass * (1 - milk_fatness))) / (cream_fatness - milk_fatness)
   milk_share_mass = cream_target_mass - cream_share_mass - (0.3 / 1.3) * cream_target_mass * milk_fatness
   condenced_milk_share_mass = (milk_share_mass + cream_share_mass) * 0.3
   return [cream_share_mass, milk_share_mass, condenced_milk_share_mass]

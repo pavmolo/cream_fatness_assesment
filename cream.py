@@ -21,7 +21,6 @@ cream_target_mass = st.number_input(f"Сколько сливок целевой
 sugar_mode = st.radio(
     "Укажите, какой способ добавления слабости вы используете",
     ('Сахар', 'Сгущенка (8%)'))
-    ("Проверка", round(cream_output[1], 2) + round(cream_output[2], 2))
 if genre == 'Сахар':
     cream_output = cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
     st.markdown('''<h2> </h2>''', unsafe_allow_html=True)

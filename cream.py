@@ -20,8 +20,8 @@ creamfat_target = st.slider("Целевое значение жирности с
 cream_target_mass = st.number_input(f"Сколько сливок целевой жирности нужно получить, кг", value=200)
 sugar_mode = st.radio("Укажите, какой способ добавления слабости вы используете", ('Сахар', 'Сгущенка (8%)'))
 if sugar_mode == 'Сахар':
+  cream_output = cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
   if cream_output[1] > 0:
-    cream_output = cream(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
     st.markdown('''<h2> </h2>''', unsafe_allow_html=True)
     st.markdown('''<h2>Результаты расчетов:</h2>''', unsafe_allow_html=True)
     st.metric("Сколько лить сливок", f'{round(cream_output[0], 2)} КГ')

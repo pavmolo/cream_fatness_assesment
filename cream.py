@@ -28,7 +28,7 @@ if sugar_mode == 'Сахар':
     st.metric("Сколько лить молока", f'{round(cream_output[1], 2)} КГ')
     st.metric("Сколько сыпать сахара", f'{round(cream_output[2], 2)} КГ')
   else:
-    st.header(f'Если вы добавите к сливкам {cream_fatness}% жирности сахар в размере 150 г на 1 кг, то получите сироп жирностью {round(cream_fatness/ 1,30, 2)}%, что ниже целевой жирности {creamfat_target}%')
+    st.header(f'Если вы добавите к сливкам {cream_fatness}% жирности сахар в размере 150 г на 1 кг, то получите сироп жирностью {round(cream_fatness/ 1.30, 2)}%, что ниже целевой жирности {creamfat_target}%')
 else:
     cream_output_cm = condenced_milk(cream_fatness, milk_fatness, creamfat_target, cream_target_mass)
     st.markdown('''<h2> </h2>''', unsafe_allow_html=True)
